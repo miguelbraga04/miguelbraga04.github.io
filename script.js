@@ -12,7 +12,7 @@ selectedDiv.hidden = false;
 clientID = "clientID - "+parseInt(Math.random() * 100);
 host = "broker.hivemq.com"; //"broker.hivemq.com" //"test.mosquitto.org" //document.getElementById("host").value;       
 port = 8884; //broker.hivemq.com 8000 //8884
-const client = new Paho.Client("broker.hivemq.com", 8000, "clientID"); //client = new Paho.Client(host, Number(port), clientID);
+const client = new Paho.Client("broker.hivemq.com", 8884, "clientID"); //client = new Paho.Client(host, Number(port), clientID);
 client.onConnectionLost = function (responseObject) {
     console.log("Connection lost: " + responseObject.errorMessage);
 };
@@ -59,10 +59,12 @@ switch (randomId) {
         var score = 0;
         var rows = 4;
         var columns = 4;
-
+        /*
         window.onload = function() {
             setGame();
         }
+        */
+        setGame();
 
         function setGame() {
             // board = [
