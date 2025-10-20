@@ -11,7 +11,7 @@ selectedDiv.hidden = false;
 //MQTT
 clientID = "clientID - "+parseInt(Math.random() * 100);
 host = "broker.hivemq.com"; //"broker.hivemq.com" //"test.mosquitto.org" //document.getElementById("host").value;       
-port = 8000; //broker.hivemq.com 8000 //8884
+port = 8884; //broker.hivemq.com 8000 //8884
 const client = new Paho.Client("broker.hivemq.com", 8000, "clientID"); //client = new Paho.Client(host, Number(port), clientID);
 client.onConnectionLost = function (responseObject) {
     console.log("Connection lost: " + responseObject.errorMessage);
@@ -21,7 +21,7 @@ client.onMessageArrived = function (message) {
 };
 
 client.connect({ 
-    useSSL: false, //useSSL true if 8884
+    useSSL: true, //useSSL true if 8884
     keepAliveInterval: 60,
     onSuccess: onConnect,
     onFailure: function (error) {
