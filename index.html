@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,800" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="paho-mqtt.min.js" type="text/javascript"></script> <!--"https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"-->
+    <title>Unlock the Box</title>
+</head>
+<body>
+    <p id="title"></p>
+    <div id="case1" class="content" hidden> <!--Answer the question-->
+        <h2>Answer the question</h2>
+        <form id="checkForm">
+            <label for="inputText">Enter text:</label>
+            <input type="text" id="inputText">
+            <button type="submit">Check</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    
+    <div id="case2" class="game" hidden> <!-- 2048  https://codepen.io/fabi_yo_/pen/zNrmwZ-->
+            <div class="head">
+                <div class="a">2048 
+                    <button class="info" onClick='info()'>i</button> 
+                    <button id="repeat" class="info repeat" onClick='reset()'>↻</button>
+                </div>
+                <div class="score">Score<br/><p id="value"></p></div>
+            </div>
+            <div class="description" id="description">
+                How to play:<br/><br/>
+                Use your arrow-keys to slide the tiles. <br/>
+                Two tiles with the same value in line can be merged. The goal is to merge the tiles and get the 2048 tile.<br/><br/>
+                The score is a sum of the merged tiles.<br><br/>
+                <span>_______________________________</span><br/><br/>
+                Made by Fabian Richter 01/2017 
+            </div>
+            <div class="field">
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+            </div>
+        <div class='' id='status'></div>
+    </div>
+
+    <div id="case3" class="content" hidden>
+
+        <h1> Kivi — Paperi — Sakset</h1>
+        <h1>✊✌️🖐️</h1>
+
+            <div class="choices">
+                <button onclick="play('✊')">✊ </button>
+                <button onclick="play('✌️')">✌️ </button>
+                <button onclick="play('🖐️')">🖐️ </button>
+            </div>
+
+            <div class="result" id="rpsResult">Tee oma valinta!</div>
+
+    </div>        
+
+    <div id="case4" class="content" hidden></div>
+    <footer></footer>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html> 
