@@ -138,7 +138,7 @@ switch (randomId) {
         let touchStartY = 0;
         let touchEndX = 0;
         let touchEndY = 0;
-        const swipeThreshold = 50; // Minimum px movement to count as swipe
+        const swipeThreshold = 100; // Minimum px movement to count as swipe
 
         document.addEventListener("touchstart", function(e) {
             const touch = e.changedTouches[0];
