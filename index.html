@@ -11,9 +11,10 @@
 <body>
     <p id="title"></p>
     <div id="case1" class="content" hidden> <!--Answer the question-->
-        <h2>Answer the question</h2>
+        <h2>Vastaa kysymykseen</h2>
+        <p>Mikä kulkee aamulla neljällä jalalla, päivällä kahdella ja illalla kolmella?</p>
         <form id="checkForm">
-            <label for="inputText">Enter text:</label>
+            <label for="inputText">Vastaus:</label> <!--Enter text:-->
             <input type="text" id="inputText">
             <button type="submit">Check</button>
         </form>
@@ -24,8 +25,8 @@
         <h1>2048</h1>
         <hr>
         <h2>Score: <span id="score">0</span></h2>
-        <div id="board">
-        </div>
+        <div id="board"></div>
+        <p id="case2_msg">Reach a tile of 128 to unlock the box.</p>
     </div>
 
     <div id="case3" class="content" hidden>
@@ -40,10 +41,12 @@
             </div>
 
             <div class="result" id="rpsResult">Tee oma valinta!</div>
-
     </div>        
 
-    <div id="case4" class="content" hidden></div>
+    <div id="case4" class="content" hidden>
+        <button type="submit">Unlock</button>
+        <p id="case4_msg">Paina avataksesi laatikon</p>
+    </div>
     <footer></footer>
     <script src="script.js" type="text/javascript"></script>
 </body>
