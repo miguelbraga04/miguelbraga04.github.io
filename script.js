@@ -408,7 +408,7 @@ switch (randomId) {
         drawScore();
 
         //score 5 to send unlock message
-        if (snakeScore >= 5) {
+        if (snakeScore = 5) {
             publishMessage();
             document.getElementById("case5_msg").textContent = "Box unlocked"
         }
